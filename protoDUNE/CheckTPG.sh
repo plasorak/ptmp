@@ -23,15 +23,6 @@ source setup_while_running.sh
 #felix609_hw_cfg.fcl:zmq_hit_send_connection: "tcp://10.73.136.60:15159"
 #felix610_hw_cfg.fcl:zmq_hit_send_connection: "tcp://10.73.136.60:15160”
 
-function connect {
-    ./build/test/check_recv --ntpsets 100 -a connect --socket-endpoints $2 --socket-pattern SUB --timeout-ms 1000 &>/dev/null
-    if [ $? -eq 0 ]
-    then
-        echo "$1 is sending hits!"
-    else
-        echo "$1 is NOT sending hits!"
-    fi
-}
 
 echo "******************************************************"
 echo "THIS SCRIPT IS TESTING WHICH FELIX BR ARE SENDING HITS"
