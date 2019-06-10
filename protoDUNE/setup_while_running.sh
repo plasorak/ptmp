@@ -26,3 +26,4 @@ function dumphit {
     # Kill it
     kill $PID
 }
+
